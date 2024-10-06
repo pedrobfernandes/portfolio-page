@@ -131,7 +131,7 @@ h1 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1 1fr;
+    grid-template-columns: 1 50rem;
     gap: 4rem;
 }
 
@@ -146,6 +146,7 @@ h1 {
 .project {
     display: flex;
     flex-direction: column;
+    width: 100%;
     max-width: 100%;
     margin: 0 auto;
 }
