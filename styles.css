@@ -136,10 +136,8 @@ h1 {
 }
 
 .projects h2 {
-    background-color: var(--navbar-color);
-    color: var(--light-green);
+    color: var(--light-purple);
     padding: 0 3rem;
-    width: 100%;
     margin: 2rem auto;
 }
 
