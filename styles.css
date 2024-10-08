@@ -38,6 +38,7 @@ a {
     font-weight: var(--links-weight);
     color: var(--light-green);
     text-decoration: none;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 h1, h2 {
@@ -51,6 +52,7 @@ h2 {
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -85,7 +87,9 @@ body {
 }
 
 .nav-list li a:hover {
-    background-color: var(--dark-green);
+    background-color: var(--light-green);
+    color: var(--darkest-green);
+    font-size: 2.2rem;
 }
 
 .welcome-section {
@@ -94,6 +98,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(135deg, #412727, #253b23);
 }
 
 
@@ -109,13 +114,12 @@ h1 {
     font-weight: var(--text-weight);
     font-style: italic;
     text-align: center;
-
 }
 
 .projects {
     text-align: center;
-    padding: 8rem 2rem;
-    background-color: var(--darkest-green);
+    padding: 4rem 2rem 8rem 2rem;
+    background: linear-gradient(135deg, var(--darkest-green), var(--navbar-color));
     border-top: 0.2rem solid var(--navbar-color);
     border-bottom: 0.2rem solid var(--navbar-color);
     box-shadow: 0 0.2rem 0 rgba(0, 0, 0, 0.3);
@@ -127,6 +131,7 @@ h1 {
     align-items: center;
     max-width: 50rem;
     margin: 0 auto;
+    padding: 4rem 2rem;
 }
 
 .projects-grid {
@@ -136,9 +141,22 @@ h1 {
 }
 
 .projects h2 {
-    color: var(--light-purple);
-    padding: 0 3rem;
-    margin: 2rem auto;
+    background: linear-gradient(135deg, #89d77f, #bd98c9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 2rem 0 3rem;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+}
+
+.projects h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.4rem;
+    background-color: var(--light-green);
+    margin: 1rem auto 0;
 }
 
 .project {
@@ -147,11 +165,22 @@ h1 {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-0.5rem);
 }
 
 
 img {
     max-width: 100%;
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scaleY(1.05);
 }
 
 
@@ -170,15 +199,28 @@ img {
     height: 100vh;
     text-align: center;
     gap: 1rem;
+    background: linear-gradient(135deg, #412727, #2e3d31);
+    padding: 4rem 2rem,;
 }
 
 .contact h2 {
     color: var(--light-green);
+    margin: 2rem 0;
 }
 
 .contact a {
-    color: var(--light-purple);
+    display: inline-block;
+    padding: 1rem 2rem;
     margin: 1rem;
+    background-color: var(--light-green);
+    color: var(--main-color);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact a:hover {
+    background-color: var(--dark-green);
+    color: #fff;
 }
 
 footer {
@@ -188,6 +230,7 @@ footer {
     width: 100%;
     height: 10vh;
     border-top: 0.2rem solid var(--navbar-color);
+    background: linear-gradient(135deg, #412727, #253b23);
 }
 
 footer p {
