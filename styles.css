@@ -187,7 +187,6 @@ img {
 .projects p {
     background-color: var(--navbar-color);
     width: 100%;
-    margin-top: -0.7rem;
     padding: 1rem 2rem;
 }
 
@@ -215,7 +214,7 @@ img {
     background-color: var(--dark-purple);
     color: var(--light-purple);
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3 ease-in-out;
 }
 
 .contact a:hover {
