@@ -12,12 +12,11 @@
     --h2-size: 3rem;
     --h1-size: 4.5rem;
 
-    --main-color: #1c2424;
     --light-green:  #89d77f;
-    --dark-green: #253b23;
     --darkest-green: #2e3d31;
     --navbar-color: #412727;
     --light-purple: #bd98c9;
+    --dark-purple: #433249;
 }
 
 *,
@@ -61,7 +60,6 @@ body {
     font-size: var(--text-size);
     font-weight: var(--text-weight);
     line-height: 1.4;
-    background-color: var(--main-color);
 }
 
 .navbar {
@@ -107,7 +105,13 @@ body {
 
 h1 {
     font-size: var(--h1-size);
-    color: var(--light-green);
+    color: var(--light-purple);
+    background-color: var(--dark-purple);
+    padding: 0 0.4rem;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 3rem;
 }
 
 .welcome-section h2 {
@@ -116,6 +120,7 @@ h1 {
     font-weight: var(--text-weight);
     font-style: italic;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .projects {
@@ -143,7 +148,7 @@ h1 {
 }
 
 .projects h2 {
-    background: linear-gradient(135deg, #89d77f, #bd98c9);
+    background: linear-gradient(135deg,#bd98c9, #89d77f);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -156,7 +161,7 @@ h1 {
     display: block;
     width: 100%;
     height: 0.4rem;
-    background-color: var(--light-green);
+    background: linear-gradient(135deg,#bd98c9, #89d77f);
     margin: 1rem auto 0;
 }
 
@@ -207,15 +212,15 @@ img {
     display: inline-block;
     padding: 1rem 2rem;
     margin: 1rem;
-    background-color: var(--light-green);
-    color: var(--main-color);
+    background-color: var(--dark-purple);
+    color: var(--light-purple);
     border-radius: 0.5rem;
     transition: background-color 0.3s ease-in-out;
 }
 
 .contact a:hover {
-    background-color: var(--dark-green);
-    color: #fff;
+    background-color: var(--light-purple);
+    color: var(--dark-purple);
 }
 
 footer {
