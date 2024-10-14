@@ -12,10 +12,10 @@
     --h2-size: clamp(2rem, 3vw + 1.5rem,  3.5rem);
     --h1-size: clamp(3rem, 4vw + 2rem, 5rem);
 
-    --light-green:  #89d77f;
+    --light-green:  #76c7a3;
     --darkest-green: #2e3d31;
-    --navbar-color: #412727;
-    --light-purple: #bd98c9;
+    --navbar-color: #3e2b2b;
+    --light-purple: #a77bba;
     --dark-purple: #433249;
 }
 
@@ -49,6 +49,11 @@ h1, h2 {
 
 h2 {
     font-size: var(--h2-size);
+}
+
+h3 {
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
 }
 
 html {
@@ -120,7 +125,7 @@ h1 {
     font-weight: var(--text-weight);
     font-style: italic;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .projects {
@@ -184,7 +189,7 @@ img {
     max-width: 100%;
 }
 
-.projects p {
+.projects h3 {
     background-color: var(--navbar-color);
     width: 100%;
     padding: 1rem 2rem;
@@ -207,9 +212,27 @@ img {
     margin: 2rem 0;
 }
 
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-links i {
+    font-size: var(--text-size);
+    color: var(--light-purple);
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-links i:hover {
+    color: var(--light-green)
+}
+
 .contact a {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     margin: 1rem;
     background-color: var(--dark-purple);
     color: var(--light-purple);
@@ -232,13 +255,17 @@ footer {
     background: linear-gradient(135deg, #412727, #253b23);
 }
 
-footer p {
+footer h3 {
     color: var(--light-purple);
 }
 
 @media screen and (min-width: 768px) {
     .navbar {
         justify-content: flex-end;
+    }
+
+    .contact-links {
+        flex-wrap: nowrap;
     }
 }
 
